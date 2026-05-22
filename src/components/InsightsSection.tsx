@@ -3,7 +3,7 @@ import React from 'react';
 export interface Award {
   category: string;
   title: string;
-  count: number;
+  count: string | number;
 }
 
 interface InsightsSectionProps {
@@ -12,24 +12,19 @@ interface InsightsSectionProps {
 
 const defaultAwards: Award[] = [
   {
-    category: "SITE OF THE DAY",
-    title: "AWARDS",
-    count: 9,
+    category: "COMPLETED",
+    title: "PROJECTS",
+    count: "25+",
   },
   {
-    category: "SITE OF THE MONTH",
-    title: "WINNERS",
-    count: 1,
+    category: "YEARS OF",
+    title: "EXPERIENCE",
+    count: "3+",
   },
   {
-    category: "FWA OF THE DAY",
-    title: "AWARDS",
-    count: 6,
-  },
-  {
-    category: "ACCLAIMED",
-    title: "MENTIONS",
-    count: 8,
+    category: "GITHUB",
+    title: "REPOS",
+    count: "40+",
   }
 ];
 
@@ -37,7 +32,7 @@ export default function InsightsSection({
   awards = defaultAwards,
 }: InsightsSectionProps) {
   return (
-    <div className="page3">
+    <div className="page3" id="insights">
       <div className="top">
         <div className="left">
           <div className="txt">

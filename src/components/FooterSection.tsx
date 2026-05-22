@@ -20,7 +20,7 @@ const defaultFooterProjects: Project[] = [
 
 export default function FooterSection() {
   return (
-    <div className="page5 page1">
+    <div className="page5 page1" id="contact">
       <ProjectSlider 
         projects={defaultFooterProjects}
         sliderTitle="ALL WORKS!"

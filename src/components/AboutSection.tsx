@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function AboutSection() {
   return (
-    <div className="page2">
+    <div className="page2" id="about">
       <div className="top">
         <div className="left">
-          <h1>FULL STACK <span>DEVELOPER!</span></h1>
+          <h1>FULL STACK <span>ARTIST!</span></h1>
           <img src="/Assets/starI.jpeg" alt="Decorative Star Badge" />
           <p>As a passionate Full Stack Developer based in India, I specialize in crafting high-performance web applications using the MERN stack, Laravel, React Native, and Next.js, combined with interactive frontend motion via GSAP and Three.js.</p>
         </div>
@@ -18,7 +18,7 @@ export default function AboutSection() {
       </div>
       <div className="bottom">
         <h1>Website</h1>
-        <img src="/Assets/stamp.png" alt="Circular Branding Stamp" />
+        <img src="/Assets/rahul_stamp.jpg" alt="Circular Branding Stamp" />
       </div>
     </div>
   );

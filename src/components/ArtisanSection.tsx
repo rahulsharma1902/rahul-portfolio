@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ArtisanSection() {
   return (
-    <div className="page4">
+    <div className="page4" id="skills">
       <div className="top">
         <div className="left">
           <img src="/Assets/pg4img1.jpeg" alt="Abstract Work Grid Left" />
@@ -18,7 +18,7 @@ export default function ArtisanSection() {
         <h1>STACK</h1>
       </div>
       <div className="bottom">
-        <h1>ARTISt</h1>
+        <h1>ARTIST</h1>
         <div className="other">
           <p>Over the years, I&apos;ve engineered interactive web platforms and mobile applications using React Native, Laravel, and the MERN stack, delivering seamless user experiences and robust API backends.</p>
           <h1>FULL STACK</h1>

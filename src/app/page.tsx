@@ -77,7 +77,7 @@ export default function Home() {
 
   return (
     <main ref={mainRef}>
-      <div className="page1">
+      <div className="page1" id="home">
         <Navbar />
         <ProjectSlider />
         <div className="miranda">
