@@ -39,7 +39,7 @@ export default function FooterSection() {
         <footer>
           <div className="fleft">
             <p className="logo">RAHUL©</p>
-            <img src="/Assets/rahul_stamp.png" alt="Branding Stamp Logo" />
+            <img src="/Assets/rahul_stamp.jpg" alt="Branding Stamp Logo" />
             <a href="#">Legal</a>
           </div>
           <div className="fright">
