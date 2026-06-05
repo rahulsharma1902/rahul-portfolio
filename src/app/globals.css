@@ -51,6 +51,7 @@ nav {
     position: sticky;
     top: 0;
     background-color: #C4BCB3;
+    z-index: 100;
 }
 
 nav img {
@@ -68,37 +69,50 @@ nav i {
 
 .elems,
 .vals {
-    height: 45vh;
+    min-height: 520px;
+    height: auto;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
-    padding: 1.5vmax 3.7vw;
+    padding: 2.5vmax 3.7vw;
+    gap: 30px;
 }
 
 #elem1 {
-    width: 31%;
-    height: 100%;
+    width: 32%;
+    display: flex;
+    flex-direction: column;
 }
 
 #elem2 {
-    width: 31%;
-    height: 100%;
+    width: 32%;
     border-left: 1px solid #333;
     border-right: 1px solid #333;
     text-align: center;
-    padding: 1vmax 4vmax;
+    padding: 2vmax 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #elem3 {
-    width: 31%;
-    height: 100%;
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+}
+
+.elem {
+    display: flex;
+    flex-direction: column;
 }
 
 .elem .image {
-    height: 55%;
     width: 100%;
+    aspect-ratio: 16/10;
     overflow: hidden;
     border: 1px solid #222;
+    margin-bottom: 15px;
 }
 
 .image img {
@@ -114,8 +128,10 @@ nav i {
 
 .elem h4 {
     font-size: 24px;
-    margin: 20px 0;
+    margin: 10px 0;
     font-family: canopee;
+    display: flex;
+    align-items: center;
 }
 
 .elem h4 span {
@@ -131,9 +147,11 @@ nav i {
 
 .elem p {
     font-family: domain;
-    font-size: 1.25vw;
+    font-size: 15px;
     font-weight: 100;
     color: #1C1C1A;
+    line-height: 1.4;
+    flex-grow: 1;
 }
 
 #elem2 h2 {
@@ -636,30 +654,39 @@ footer .fright a {
     .elems,
     .vals {
         height: auto;
+        min-height: auto;
         flex-direction: column;
-        gap: 30px;
-        padding: 40px 20px;
+        gap: 25px;
+        padding: 30px 20px;
     }
 
-    #elem1,
-    #elem2,
-    #elem3 {
+    #elem1 {
         width: 100% !important;
         height: auto !important;
+        order: 2;
+        display: flex !important;
     }
 
     #elem2 {
+        width: 100% !important;
+        height: auto !important;
+        order: 1;
         border-left: none !important;
         border-right: none !important;
         border-top: 1px solid #1C1C1A !important;
         border-bottom: 1px solid #1C1C1A !important;
-        padding: 40px 0 !important;
-        margin: 20px 0 !important;
+        padding: 30px 0 !important;
+        margin: 10px 0 !important;
         text-align: center;
     }
 
+    #elem3 {
+        display: none !important;
+    }
+
     .elem .image {
-        height: 300px;
+        height: auto;
+        aspect-ratio: 16/10;
         width: 100%;
     }
 
@@ -992,7 +1019,7 @@ footer .fright a {
     }
 
     .elem .image {
-        height: 240px;
+        height: auto;
     }
 
     #elem2 h2 {
@@ -1324,3 +1351,116 @@ footer .fright a {
         font-size: 6vw;
     }
 }
+
+/* Dynamic Slider Styles */
+.card-interactive {
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card-interactive:hover {
+    transform: translateY(-5px);
+}
+
+.project-link-wrapper {
+    display: block;
+    text-decoration: none;
+}
+
+.live-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: canopee;
+    font-size: 16px;
+    color: #1C1C1A;
+    background-color: transparent;
+    border: 1px solid #1C1C1A;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.live-link:hover {
+    color: #C4BCB3;
+    background-color: #1C1C1A;
+}
+
+.live-link i {
+    font-size: 14px;
+    color: inherit;
+    margin: 0 !important;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.slider-arrow {
+    background: transparent;
+    border: 1px solid #1C1C1A;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+    background-color: #1C1C1A;
+}
+
+.slider-arrow:hover i {
+    color: #C4BCB3;
+}
+
+.slider-arrow i {
+    font-size: 20px;
+    color: #1C1C1A;
+    margin: 0 !important;
+}
+
+.slider-fraction {
+    font-family: domain;
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+/* Slide animation */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeInSlide 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Ensure mobile layout handles the buttons nicely */
+@media (max-width: 1024px) {
+    .slider-controls {
+        margin: 15px 0;
+    }
+    
+    .live-link {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}

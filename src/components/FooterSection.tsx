@@ -1,31 +1,13 @@
 import React from 'react';
-import ProjectSlider, { Project } from './ProjectSlider';
-
-const defaultFooterProjects: Project[] = [
-  {
-    id: "elem1",
-    image: "/Assets/pg5img1.webp",
-    title: "WOW CONCEPT",
-    isNew: true,
-    description: "AvroKO is an award-winning global design firm, established itself as a global leader in interior architecture for hospitality, restaurant and bars.",
-  },
-  {
-    id: "elem3",
-    image: "/Assets/elem2.webp",
-    title: "THE ROGER HUB",
-    isNew: true,
-    description: "The Roger Hub is an immersive web experience showcasing the tennis-inspired 'On' sneakers, a collaboration born out of a partnership with the legendary Roger Federer.",
-  }
-];
+import ProjectSlider from './ProjectSlider';
 
 export default function FooterSection() {
   return (
     <div className="page5 page1" id="contact">
       <ProjectSlider 
-        projects={defaultFooterProjects}
         sliderTitle="ALL WORKS!"
         sliderSub="Handpick highlights - spanning the last few years."
-        sliderTip="Click on slide to explore."
+        sliderTip="Click card or use controls to navigate"
         className="vals"
       />
       <div>
